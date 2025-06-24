@@ -1,79 +1,31 @@
 ---
-title: "Astro Sphere"
-description: "Portfolio and blog build with astro."
-date: "03/18/2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+title: "Pokedex"
+description: "Pokedex feito com Next , Tailwind "
+date: "01/05/2025"
+demoURL: "https://pokodex-five.vercel.app/"
+repoURL: "https://github.com/felipebrgs1/pokodex/"
 ---
 
-![Astro Sphere](/astro-sphere.jpg)
 
-Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog theme based on Mark Horn's personal website.
+Pokodex é um projeto desenvolvido em TypeScript que tem como objetivo apresentar uma Pokédex interativa. A aplicação permite explorar informações sobre diferentes Pokémon de forma prática e visual, sendo uma ótima demonstração de habilidades em desenvolvimento front-end moderno.
 
-It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components.
+## Principais Tecnologias
 
-## 🚀 Deploy your own
+- **TypeScript** (principal linguagem)
+- CSS
+- JavaScript
 
-<div class="flex gap-2">
-  <a target="_blank" aria-label="Deploy with Vercel" href="https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_vercel.svg" />
-  </a>
-  <a target="_blank" aria-label="Deploy with Netlify" href="https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_netlify.svg" />
-  </a>
-</div>
+## Funcionalidades
 
-## 📋 Features
+- Listagem de Pokémon com informações detalhadas
+- Interface intuitiva e responsiva
+- Busca e filtragem de Pokémon
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
+## Objetivo
 
-## 💯 Lighthouse score
+Este projeto foi criado para estudar e praticar conceitos de TypeScript, além de aprimorar conhecimentos em desenvolvimento de interfaces web e consumo de APIs públicas.
 
-![Astro Sphere Lighthouse Score](/lighthouse-nano.jpg)
+## Repositório
 
-## 🕊️ Lightweight
-
-All pages under 100kb (including fonts)
-
-## ⚡︎ Fast
-
-Rendered in ~40ms on localhost
-
-## 📄 Configuration
-
-The blog posts on the demo serve as the documentation and configuration.
-
-## 💻 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
-
-| Command                   | Action                                            |
-| :------------------------ | :------------------------------------------------ |
-| `npm install`             | Installs dependencies                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`       |
-| `npm run sync`            | Generates TypeScript types for all Astro modules. |
-| `npm run build`           | Build your production site to `./dist/`           |
-| `npm run preview`         | Preview your build locally, before deploying      |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`  |
-| `npm run astro -- --help` | Get help using the Astro CLI                      |
-| `npm run lint`            | Run ESLint                                        |
-| `npm run lint:fix`        | Auto-fix ESLint issues                            |
-
-## 🏛️ License
-
-MIT
+[Repo](https://github.com/felipebrgs1/pokodex)
+[Demo](https://pokodex-five.vercel.app/)
