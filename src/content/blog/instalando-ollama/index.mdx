@@ -1,0 +1,42 @@
+
+---
+title: "Instalando o Ollama"
+description: "Tudo o que você precisa saber para instalar o Ollama no seu computador."
+date: "2025-06-24"
+---
+
+Para instalar o Ollama no Linux, basta executar o seguinte comando:
+
+```bash
+curl -sSfL https://ollama.com/download.sh | sh
+````
+
+Para macOS ou Windows, você pode baixar o instalador diretamente do site oficial: **[Download](https://ollama.com/download)**
+
+Para verificar se a instalação foi bem-sucedida, execute o seguinte comando:
+
+```bash
+ollama version
+```
+
+Por padrão, o Ollama roda na porta `127.0.0.1:11434`. Caso ele não esteja em execução, você pode iniciar o serviço com o seguinte comando:
+
+```bash
+ollama serve
+```
+
+---
+
+## Rodando o primeiro modelo
+
+Vamos testar o Qwen3 na versão mais simples, com 0.6B de parâmetros:
+
+```bash
+ollama run qwen3:0.6B
+```
+
+Ele irá baixar e iniciar o modelo e, em seguida, abrirá um prompt para que possamos interagir com ele. Basta digitar algo e pressionar Enter.
+
+Para sair do prompt, basta pressionar `Ctrl + D`.
+
+Com isso ja é possivel construir aplicações que utilizem o Ollama como backend de IA.
