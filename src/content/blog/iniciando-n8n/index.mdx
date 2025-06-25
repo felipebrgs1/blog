@@ -1,66 +1,88 @@
-
 ---
 title: "Conhecendo o n8n"
 description: "Tudo o que você precisa saber para instalar o n8n no seu computador."
 date: "2025-06-24"
 ---
 
+Para rodar o n8n no seu computador, você pode utilizar o Docker, que é a forma mais recomendada e fácil de instalar.  
+Para isso, é necessário ter o Docker instalado. Se ainda não tiver, siga o guia de instalação do Docker para o seu sistema operacional.
 
-Para rodar o n8n no seu computador, você pode utilizar o Docker, que é a forma mais recomendada e fácil de instalar.
-Para isso, você precisa ter o Docker instalado. Se você ainda não tem o Docker instalado,
-você pode seguir o guia de instalação do Docker para o seu sistema operacional.
-Para instalar o n8n, basta executar o seguinte comando:
+Para instalar o n8n via Docker, execute o seguinte comando (recomendado para Linux):
 
-se você estiver usando o Linux, execute:
 ```bash
 sudo docker run -it --rm \
- --name n8n \
- --network host \
- -v n8n_data:/home/node/.n8n \
- docker.n8n.io/n8nio/n8n \
- start
-```
+  --name n8n \
+  --network host \
+  -v n8n_data:/home/node/.n8n \
+  docker.n8n.io/n8nio/n8n \
+  start
+````
 
-Ou se preferir, você pode utilizar o npm:
+Se preferir, você também pode instalar usando o `npm`:
+
 ```bash
-npm install n8n -g
+npm install -g n8n
 ```
 
 ---
+
 ## Acessando a interface web
-Após iniciar o n8n, você pode acessar a interface web através do seu navegador, utilizando o seguinte endereço:
+
+Após iniciar o n8n, acesse a interface web pelo seu navegador, utilizando:
 
 ```bash
 http://localhost:5678
 ```
-Você verá a tela de boas-vindas do n8n, onde poderá criar seu primeiro fluxo de trabalho.
+
+Você verá a tela de boas-vindas, onde poderá criar seu primeiro fluxo de trabalho.
+
 ---
+
 ## Criando seu primeiro fluxo de trabalho
-Para criar seu primeiro fluxo de trabalho, clique no botão "New Workflow" na tela inicial.
-Você será direcionado para a tela de edição do fluxo de trabalho, onde poderá arrastar e soltar nós para criar seu fluxo.
-Você pode adicionar nós de diferentes tipos, como gatilhos, ações e integrações com outros serviços.
 
-1-Para começar , vamos adicionar um Chat Trigger, que será o gatilho do nosso fluxo de trabalho. Clique no botão "Add Node" e selecione "Chat Trigger".
-Isso criará um nó de gatilho de chat no seu fluxo de trabalho.
+Para criar seu primeiro workflow, clique no botão **"New Workflow"** na tela inicial.
+Você será direcionado para a interface de edição, onde poderá arrastar e soltar nós para montar seu fluxo.
 
-2- agora, vamos adicionar o AI agent. Clique no botão "Add Node" e selecione "AI Agent".
+### Passo a passo:
 
-para manter a simplicidade, vamos utilizar o modelo Qwen3, ja explicado no artigo anterior.
-Para isso, clique no nó Chat Model , adicione o Ollama chat model , crie a credencial, que é https://127.0.0.1:11434 
+1. Adicione um **Chat Trigger**, que será o gatilho do seu fluxo.
+   Clique em **"Add Node"** e selecione **"Chat Trigger"**.
 
-opcional - adicionar um nó de memoria, que pode ser feito clicando no botão "Add Node" e selecionando "Memory" , selecione o  Simple Memory.
-ele guarda as mensagens do chat e as envia para o modelo de IA, para que ele possa responder de forma mais contextualizada.
+2. Em seguida, adicione um **AI Agent**.
+   Clique novamente em **"Add Node"** e selecione **"AI Agent"**.
 
+Para manter a simplicidade, vamos utilizar o modelo **Qwen3**, já explicado no artigo anterior.
+Clique no nó **Chat Model**, selecione **Ollama Chat Model**, e configure a credencial com a URL:
+`http://127.0.0.1:11434`
+
+### (Opcional) Adicionar Memória:
+
+Você pode adicionar um nó de memória para armazenar o histórico da conversa.
+Clique em **"Add Node"**, selecione **"Memory"** e depois **"Simple Memory"**.
+Isso permitirá que o modelo de IA responda com mais contexto, utilizando o histórico do chat.
 
 ---
-Com isso você já tem um fluxo de trabalho básico configurado no n8n, que utiliza o Qwen3 como modelo de IA.
-Você pode testar o fluxo de trabalho clicando no botão "Execute Workflow" e interagindo com o chat.
+
+## Testando o fluxo
+
+Com isso, você terá um fluxo básico configurado no n8n, utilizando o modelo **Qwen3** como IA.
+Clique em **"Execute Workflow"** e interaja com o chat para testá-lo.
+
 ---
+
 ## Conclusão
-O n8n é uma ferramenta poderosa para automação de fluxos de trabalho e integração com outros serviços.
-Com o n8n, você pode criar fluxos de trabalho complexos de forma visual e intuitiva, sem precisar escrever código.
-Neste artigo, vimos como instalar o n8n e criar um fluxo de trabalho básico utilizando o Qwen3 como modelo de IA.
-Você pode explorar mais recursos do n8n e criar fluxos de trabalho mais complexos, integrando com outros serviços e utilizando diferentes nós.
-Se você quiser saber mais sobre o n8n, você pode acessar a documentação oficial em [n8n.io](https://n8n.io/).
 
-Futuramente adicionarei mais exemplos de Workflows com n8n, como por exemplo, geraçao de embeddings e indexação de documentos, ou até mesmo a criação de um chatbot completo utilizando o n8n e o Ollama.
+O n8n é uma ferramenta poderosa para automação de fluxos de trabalho e integração com diversos serviços.
+Com ele, é possível criar automações complexas de forma visual e intuitiva, sem precisar escrever código.
+
+Neste artigo, você aprendeu como instalar o n8n e configurar um fluxo básico utilizando o Qwen3.
+Explore mais recursos da ferramenta e vá além, integrando outros serviços e criando soluções mais elaboradas.
+
+Para saber mais, acesse a [documentação oficial do n8n](https://n8n.io/).
+
+Em breve, trarei mais exemplos de Workflows, como:
+
+* Geração de embeddings e indexação de documentos;
+* Criação de um chatbot completo com n8n e Ollama.
+
+
