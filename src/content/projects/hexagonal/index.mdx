@@ -1,0 +1,41 @@
+---
+
+title: "Sistema de Gerenciamento de Pedidos"
+description: "Aplicação de gerenciamento de pedidos com arquitetura hexagonal em TypeScript."
+date: "07/07/2025"
+
+---
+
+Este projeto é um sistema de gerenciamento de pedidos desenvolvido em TypeScript, focado na
+implementação da **Arquitetura Hexagonal (Ports and Adapters)**. O objetivo principal é demonstrar uma
+aplicação robusta, escalável e de fácil manutenção, desacoplando a lógica de negócio das tecnologias de
+infraestrutura e interfaces externas.
+
+## Principais Tecnologias
+
+- **TypeScript** (linguagem principal)
+- **Node.js** (ambiente de execução)
+- **Express.js** (framework web para a camada de interface HTTP)
+- **Prisma ORM** (para persistência de dados)
+- **RabbitMQ** (para mensageria e eventos assíncronos)
+- **Vitest** (framework de testes)
+- **ESLint** (para padronização de código)
+
+
+## Funcionalidades
+
+- **Criação de Pedidos:** Permite a criação de novos pedidos.
+- **Adição de Itens:** Funcionalidade para adicionar itens a um pedido existente.
+- **Cálculo de Total:** Cálculo automático do valor total do pedido, incluindo lógica de desconto.
+- **Atualização de Status:** Gerenciamento do ciclo de vida do pedido através de atualizações de status.
+- **Gerenciamento de Eventos de Domínio:** Utilização de eventos para comunicação entre contextos e integração com serviços externos (ex: estoque, notificação).
+- **Integração com Serviços Externos:** Adaptação para serviços de estoque, notificação e cálculo de desconto.
+
+## Objetivo
+
+O projeto serve como um estudo de caso e demonstração prática dos princípios da Arquitetura Hexagonal, promovendo:
+
+- **Desacoplamento:** Separação clara entre o domínio e as camadas de infraestrutura/interface.
+- **Testabilidade:** Facilita a escrita de testes unitários e de integração.
+- **Manutenibilidade:** Torna o sistema mais fácil de evoluir e adaptar a novas tecnologias.
+- **Escalabilidade:** Prepara a aplicação para crescer e lidar com maior complexidade.
